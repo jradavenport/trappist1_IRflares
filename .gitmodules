@@ -1,3 +1,6 @@
 [submodule "k2_trappist"]
 	path = k2_trappist
 	url = https://github.com/jradavenport/trappist-flares.git
+[submodule "FlareGrid"]
+	path = FlareGrid
+	url = https://github.com/jradavenport/FlareGrid.git

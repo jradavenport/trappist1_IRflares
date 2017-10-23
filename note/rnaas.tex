@@ -1,6 +1,6 @@
 %% rnaastex.cls is the classfile used for Research Notes. It is derived
 %% from aastex61.cls with a few tweaks to allow for the unique format required.
-\documentclass{rnaastex}
+\documentclass[]{rnaastex}
 
 \usepackage{graphicx}
 \usepackage[suffix=]{epstopdf}
@@ -15,7 +15,7 @@
 \begin{document}
 
 
-\title{Infrared Flares on M Dwarfs: a Hinderance to\\ Future Transiting Exoplanet Studies}
+\title{Infrared Flares from M Dwarfs: a Hinderance to\\ Future Transiting Exoplanet Studies}
 
 %% Note that the corresponding author command and emails has to come
 %% before everything else. Also place all the emails in the \email
@@ -33,8 +33,7 @@
 %% Note that RNAAS manuscripts DO NOT have abstracts.
 %% See the online documentation for the full list of available subject
 %% keywords and the rules for their use.
-\keywords{editorials, notices --- 
-miscellaneous --- catalogs --- surveys}
+\keywords{stars: activity --- stars: low-mass --- planets and satellites: detection}
 
 
 
@@ -42,30 +41,29 @@ miscellaneous --- catalogs --- surveys}
 %% research note leave the \section call blank to make the title.
 \section{} 
 
-many current and future missions are pushing to infrared (IR) wavelengths to study exoplanets. the motivation for this includes both studies of features in planetary atmospheres where the flux contrast between the planet and star is more favorable \citep{deming2009}, and the decreased impact of stellar activity. Indeed, recent analysis of stellar activity, specifically starspots and faculae, found to not substantially impact the transit signatures from FGKM stars with JWST \citep{zellem2017}. However, this is not true in the case of flares. flares have already been a roadblock for detecting transits for stars in the optical \citep[e.g. Proxima b][]{davenport2016a, kipping2017}.
+Many current and future exoplanet missions are pushing to infrared (IR) wavelengths where the flux contrast between the planet and star is more favorable \citep{deming2009}, and the impact of stellar magnetic activity is decreased. Indeed, a recent analysis of starspots and faculae found these forms of stellar activity do not substantially impact the transit signatures or science potential for FGKM stars with JWST \citep{zellem2017}. However, this is not true in the case of flares, which I demonstrate can be a hinderance to transit studies in this note. 
 
-Dedicated observations by \citet{tofflemire2012} put upper limits on flare flux in the IR for mid-M dwarfs from for moderate amplitude events.
-\citet{davenport2012} created peak-flux conversions between $ugrizJHK$-bands for M0--M6, which imply very small amplitudes for IR compared to the dramatic events in the optical.
+\citet{tofflemire2012} noted the potential impact of flares for transit studies in the IR, and found upper-limits for IR flare flux for mid-M stars. \citet{davenport2012} created peak flare flux conversions between optical and IR bands for M0--M6 stars, and noted the IR flare flux contrast is strongest for later spectral types. Flares have already been a roadblock for detecting transits for stars in the optical for M dwarfs \citep[e.g. Proxima b:][]{davenport2016a, kipping2017}. Late M dwarfs, while appealing targets for transit discoveries and transit-transmission-spectroscopy studies, are therefore the most susceptible to contamination by flares in the IR.
 
-infrared flares have been observed now, most notably in the transit observations of TRAPPIST-1. This system is an M8, hosting 7 transiting exoplanets discovered by ground- and space-based monitoring \citep{gillon2016,gillon2017}
-follow-up data from \Kepler/K2 able to find period of outer planet \citep{luger2017} and recovered many flares for this active low-mass star \citep{vida2017}. 
-BOTH the IR and the Optical data contain flares that partially overlap transits: TRAPPIST-1b in the IR from \citet{gillon2017} and TRAPPIST-1h in the optical from \citet{luger2017}.
-Figure \ref{fig:1} shows examples, plus the typical figure of merit for flare occurrence, showing powerlaw behavior in both the optical and IR, and with comparable occurrence frequency. 
-
-
-Since flares are common for low-mass stars, and can occur even for ``inactive'' stars \citep[e.g.][]{hawley2014}, we suggest that future surveys include optical monitoring during transits to help calibrate out the effects of flares. Because flares are significantly higher amplitude in the optical, this monitoring need not be to the same photometric precision, and can likely be done from the ground.
+Infrared stellar flares have been observed now, most notably in the Spitzer observations of TRAPPIST-1. This system is a nearby M8 star, hosting 7 transiting exoplanets discovered with ground- and space-based photometry \citep{gillon2016,gillon2017}. Four individual flare events are apparent in the Spitzer 4.5$\mu$m data\footnote{\url{https://github.com/jradavenport/trappist1_IRflares}} -- two more than reported by \citet{gillon2017}.
+Follow-up data from \Kepler/K2 able revealed the orbital period of the outer planet \citep{luger2017}, and recovered many flares for this active star \citep{vida2017}. 
+Interestingly, both the IR and the optical data contain flares that partially overlap transits: TRAPPIST-1b in the IR from \citet{gillon2017} and TRAPPIST-1h in the optical from \citet{luger2017}.
+Figure \ref{fig:1} shows examples of isolated flares, as well as the power-law occurrence frequency distribution of flare events in both the optical and IR.
 
 
 
 
-%% An example figure call using \includegraphics
+Since flares are common for low-mass stars, and can occur even for ``inactive'' stars \citep[e.g.][]{hawley2014}, I suggest that future surveys include optical monitoring during infrared transit observations to help calibrate out the effects of flares. Since flares are significantly higher amplitude in the optical \citep{davenport2012}, this monitoring does need not be at the same photometric precision as the IR, and can likely be done from the ground with modest aperture telescopes.
+
+
+
 \begin{figure*}[h!]
 \begin{center}
 \includegraphics[height=2in]{trappist1_flare3}
 \includegraphics[height=2in]{flare_29}\\
 \includegraphics[width=4in]{ffd_ED}
-\caption{Top: Flares from Spitzer (left) and K2 (right) on TRAPPIST-1. 
-Bottom: Cumulative flare frequency distributions for both Spitzer and K2 flare events in units of Equivalent Duration, which can be converted to event energies by 
+\caption{Top: Example flares from Spitzer (left) and K2 (right) from the M8 dwarf TRAPPIST-1. 
+Bottom: Cumulative flare frequency distributions for both Spitzer and K2 flare events in units of Equivalent Duration, which can be converted to event energies by multiplying by the stellar quiescent luminosity in each bandpass. 
 \label{fig:1}}
 \end{center}
 \end{figure*}
@@ -78,6 +76,75 @@ JRAD is supported by an NSF Astronomy and Astrophysics Postdoctoral Fellowship u
 
 
 %%%%%%%%%%%%%%%%%
-\bibliography{/Users/davenpj3/Dropbox/references.bib}
+%\bibliography{/Users/davenpj3/Dropbox/references.bib}
+
+\begin{thebibliography}{}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{{Davenport} {et~al.}(2012){Davenport}, {Becker}, {Kowalski},
+  {Hawley}, {Schmidt}, {Hilton}, {Sesar}, \& {Cutri}}]{davenport2012}
+{Davenport}, J.~R.~A., {Becker}, A.~C., {Kowalski}, A.~F., {et~al.} 2012, \apj,
+  748, 58
+
+\bibitem[{{Davenport} {et~al.}(2016){Davenport}, {Kipping}, {Sasselov},
+  {Matthews}, \& {Cameron}}]{davenport2016a}
+{Davenport}, J.~R.~A., {Kipping}, D.~M., {Sasselov}, D., {Matthews}, J.~M., \&
+  {Cameron}, C. 2016, \apjl, 829, L31
+
+\bibitem[{{Deming} {et~al.}(2009){Deming}, {Seager}, {Winn}, {Miller-Ricci},
+  {Clampin}, {Lindler}, {Greene}, {Charbonneau}, {Laughlin}, {Ricker},
+  {Latham}, \& {Ennico}}]{deming2009}
+{Deming}, D., {Seager}, S., {Winn}, J., {et~al.} 2009, \pasp, 121, 952
+
+\bibitem[{{Gillon} {et~al.}(2016){Gillon}, {Jehin}, {Lederer}, {Delrez}, {de
+  Wit}, {Burdanov}, {Van Grootel}, {Burgasser}, {Triaud}, {Opitom}, {Demory},
+  {Sahu}, {Bardalez Gagliuffi}, {Magain}, \& {Queloz}}]{gillon2016}
+{Gillon}, M., {Jehin}, E., {Lederer}, S.~M., {et~al.} 2016, \nat, 533, 221
+
+\bibitem[{{Gillon} {et~al.}(2017){Gillon}, {Triaud}, {Demory}, {Jehin}, {Agol},
+  {Deck}, {Lederer}, {de Wit}, {Burdanov}, {Ingalls}, {Bolmont}, {Leconte},
+  {Raymond}, {Selsis}, {Turbet}, {Barkaoui}, {Burgasser}, {Burleigh}, {Carey},
+  {Chaushev}, {Copperwheat}, {Delrez}, {Fernandes}, {Holdsworth}, {Kotze}, {Van
+  Grootel}, {Almleaky}, {Benkhaldoun}, {Magain}, \& {Queloz}}]{gillon2017}
+{Gillon}, M., {Triaud}, A.~H.~M.~J., {Demory}, B.-O., {et~al.} 2017, \nat, 542,
+  456
+
+\bibitem[{{Hawley} {et~al.}(2014){Hawley}, {Davenport}, {Kowalski},
+  {Wisniewski}, {Hebb}, {Deitrick}, \& {Hilton}}]{hawley2014}
+{Hawley}, S.~L., {Davenport}, J.~R.~A., {Kowalski}, A.~F., {et~al.} 2014, \apj,
+  797, 121
+
+\bibitem[{{Kipping} {et~al.}(2017){Kipping}, {Cameron}, {Hartman}, {Davenport},
+  {Matthews}, {Sasselov}, {Rowe}, {Siverd}, {Chen}, {Sandford}, {Bakos},
+  {Jord{\'a}n}, {Bayliss}, {Henning}, {Mancini}, {Penev}, {Csubry}, {Bhatti},
+  {Da Silva Bento}, {Guenther}, {Kuschnig}, {Moffat}, {Rucinski}, \&
+  {Weiss}}]{kipping2017}
+{Kipping}, D.~M., {Cameron}, C., {Hartman}, J.~D., {et~al.} 2017, \aj, 153, 93
+
+\bibitem[{{Luger} {et~al.}(2017){Luger}, {Sestovic}, {Kruse}, {Grimm},
+  {Demory}, {Agol}, {Bolmont}, {Fabrycky}, {Fernandes}, {Van Grootel},
+  {Burgasser}, {Gillon}, {Ingalls}, {Jehin}, {Raymond}, {Selsis}, {Triaud},
+  {Barclay}, {Barentsen}, {Howell}, {Delrez}, {de Wit}, {Foreman-Mackey},
+  {Holdsworth}, {Leconte}, {Lederer}, {Turbet}, {Almleaky}, {Benkhaldoun},
+  {Magain}, {Morris}, {Heng}, \& {Queloz}}]{luger2017}
+{Luger}, R., {Sestovic}, M., {Kruse}, E., {et~al.} 2017, Nature Astronomy, 1,
+  0129
+
+\bibitem[{{Tofflemire} {et~al.}(2012){Tofflemire}, {Wisniewski}, {Kowalski},
+  {Schmidt}, {Kundurthy}, {Hilton}, {Holtzman}, \& {Hawley}}]{tofflemire2012}
+{Tofflemire}, B.~M., {Wisniewski}, J.~P., {Kowalski}, A.~F., {et~al.} 2012,
+  \aj, 143, 12
+
+\bibitem[{{Vida} {et~al.}(2017){Vida}, {K{\H o}v{\'a}ri}, {P{\'a}l},
+  {Ol{\'a}h}, \& {Kriskovics}}]{vida2017}
+{Vida}, K., {K{\H o}v{\'a}ri}, Z., {P{\'a}l}, A., {Ol{\'a}h}, K., \&
+  {Kriskovics}, L. 2017, \apj, 841, 124
+
+\bibitem[{{Zellem} {et~al.}(2017){Zellem}, {Swain}, {Roudier}, {Shkolnik},
+  {Creech-Eakman}, {Ciardi}, {Line}, {Iyer}, {Bryden}, {Llama}, \&
+  {Fahy}}]{zellem2017}
+{Zellem}, R.~T., {Swain}, M.~R., {Roudier}, G., {et~al.} 2017, \apj, 844, 27
+
+\end{thebibliography}
 
 \end{document}
